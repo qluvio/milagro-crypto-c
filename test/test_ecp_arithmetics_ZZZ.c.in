@@ -41,7 +41,7 @@ void read_BIG_XXX(BIG_XXX A, char* string)
     char support[LINE_LEN];
     BIG_XXX_zero(A);
     len = strlen(string)+1;
-    amcl_hex2bin(string,support,len);
+    amcl_hex2bin(support,string,len);
     len = (len-1)/2;;
     BIG_XXX_fromBytesLen(A,support,len);
     BIG_XXX_norm(A);

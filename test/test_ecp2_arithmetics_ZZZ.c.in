@@ -40,7 +40,7 @@ void read_BIG_XXX(BIG_XXX A, char* string)
     char bin[LINE_LEN];
     BIG_XXX_zero(A);
     len = strlen(string)+1;
-    amcl_hex2bin(string,bin,len);
+    amcl_hex2bin(bin,string,len);
     len = (len-1)/2;;
     BIG_XXX_fromBytesLen(A,bin,len);
     BIG_XXX_norm(A);

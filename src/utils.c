@@ -34,7 +34,7 @@
 #include "utils.h"
 
 /* Decode hex value */
-void amcl_hex2bin(const char *src, char *dst, int src_len)
+void amcl_hex2bin(char *dst, const char *src, int src_len)
 {
     int i;
     char v,c;
@@ -80,7 +80,7 @@ void amcl_hex2bin(const char *src, char *dst, int src_len)
 }
 
 /* Encode binary string */
-void amcl_bin2hex(char *src, char *dst, int src_len)
+void amcl_bin2hex(char *dst, char *src, int src_len)
 {
     int i;
     for (i = 0; i < src_len; i++)

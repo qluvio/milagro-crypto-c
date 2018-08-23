@@ -125,7 +125,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // Msg binary value
-            amcl_hex2bin(linePtr, Msg, l1);
+            amcl_hex2bin(Msg, linePtr, l1);
 
             MsgOct.len=l2;
             MsgOct.max=l2;
@@ -148,7 +148,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // d binary value
-            amcl_hex2bin(linePtr, d, l1);
+            amcl_hex2bin(d, linePtr, l1);
 
             dOct.len=l2;
             dOct.max=l2;
@@ -167,7 +167,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // Qx binary value
-            amcl_hex2bin(linePtr, Qx, l1);
+            amcl_hex2bin(Qx, linePtr, l1);
         }
 
         if (!strncmp(line, QyStr, strlen(QyStr)))
@@ -182,7 +182,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // Qy binary value
-            amcl_hex2bin(linePtr, Qy, l1);
+            amcl_hex2bin(Qy, linePtr, l1);
         }
 
         if (!strncmp(line, kStr, strlen(kStr)))
@@ -201,7 +201,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // k binary value
-            amcl_hex2bin(linePtr, k, l1);
+            amcl_hex2bin(k, linePtr, l1);
 
             kOct.len=l2;
             kOct.max=l2;
@@ -224,7 +224,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // R binary value
-            amcl_hex2bin(linePtr, R, l1);
+            amcl_hex2bin(R, linePtr, l1);
 
             ROct.len=l2;
             ROct.max=l2;
@@ -247,7 +247,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // S binary value
-            amcl_hex2bin(linePtr, S, l1);
+            amcl_hex2bin(S, linePtr, l1);
 
             SOct.len=l2;
             SOct.max=l2;

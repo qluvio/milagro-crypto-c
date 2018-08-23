@@ -109,7 +109,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // Msg binary value
-            amcl_hex2bin(linePtr, Msg, l1);
+            amcl_hex2bin(Msg, linePtr, l1);
         }
 
         if (!strncmp(line, MDStr, strlen(MDStr)))
@@ -135,7 +135,7 @@ int main(int argc, char** argv)
             octet MD1Oct= {MDLen,MDLen,MD1};
 
             // Golden MD value
-            amcl_hex2bin(linePtr, MD1, l1);
+            amcl_hex2bin(MD1, linePtr, l1);
 
             if (!strcmp(argv[2], "sha512"))
             {

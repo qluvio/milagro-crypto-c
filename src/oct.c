@@ -348,7 +348,7 @@ void OCT_rand(octet *x,csprng *RNG,int len)
 }
 
 /* Convert an octet to a hex string */
-void OCT_toHex(octet *src,char *dst)
+void OCT_toHex(char *dst,octet *src)
 {
     int i;
     unsigned char ch;
@@ -387,7 +387,7 @@ void OCT_fromHex(octet *dst,char *src)
 
 
 /* Convert an octet to a string */
-void OCT_toStr(octet *src,char *dst)
+void OCT_toStr(char *dst,octet *src)
 {
     int i;
     unsigned char ch;

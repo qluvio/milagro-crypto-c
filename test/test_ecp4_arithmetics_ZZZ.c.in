@@ -36,7 +36,7 @@
 void read_BIG_XXX(BIG_XXX A, char* string, int len)
 {
     char bin[MODBYTES_XXX];
-    amcl_hex2bin(string,bin,len);
+    amcl_hex2bin(bin,string,len);
     BIG_XXX_fromBytes(A,bin);
 }
 
@@ -55,7 +55,7 @@ int read_ECP4_ZZZ(ECP4_ZZZ *ecp4, char* str)
     char octstr[8*MODBYTES_XXX];
     octet OCTstr = {sizeof(octstr),sizeof(octstr),octstr};
 
-    amcl_hex2bin(str,OCTstr.val,strlen(str));
+    amcl_hex2bin(OCTstr.val,str,strlen(str));
     return ECP4_ZZZ_fromOctet(ecp4,&OCTstr);
 }
 

@@ -137,7 +137,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // KEY binary value
-            amcl_hex2bin(linePtr, KEY, l1);
+            amcl_hex2bin(KEY, linePtr, l1);
         }
 
         if (!strncmp(line, IVStr, strlen(IVStr)))
@@ -156,7 +156,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // IV binary value
-            amcl_hex2bin(linePtr, IV, l1);
+            amcl_hex2bin(IV, linePtr, l1);
         }
 
         if (!strncmp(line, CIPHERTEXTStr, strlen(CIPHERTEXTStr)))
@@ -175,7 +175,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // CIPHERTEXT binary value
-            amcl_hex2bin(linePtr, CIPHERTEXT, l1);
+            amcl_hex2bin(CIPHERTEXT, linePtr, l1);
         }
 
         if (!strncmp(line, PLAINTEXTStr, strlen(PLAINTEXTStr)))
@@ -194,7 +194,7 @@ int main(int argc, char** argv)
 
             // Golden PLAINTEXT value
             octet PLAINTEXT1Oct= {CIPHERTEXTLen,CIPHERTEXTLen,PLAINTEXT1};
-            amcl_hex2bin(linePtr, PLAINTEXT1, l1);
+            amcl_hex2bin(PLAINTEXT1, linePtr, l1);
 
             amcl_aes a;
 

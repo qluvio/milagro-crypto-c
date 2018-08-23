@@ -36,22 +36,22 @@
  *
  * Decode hex value.
  *
- * @param src     Hex encoded string
  * @param dst     Binary string
+ * @param src     Hex encoded string
  * @param src_len length Hex encoded string
  */
-void amcl_hex2bin(const char *src, char *dst, int src_len);
+void amcl_hex2bin(char *dst, const char *src, int src_len);
 
 /**
  * @brief Encode binary string
  *
  * Encode binary string.
  *
- * @param src     Binary string
  * @param dst     Hex encoded string
+ * @param src     Binary string
  * @param src_len length binary string
  */
-void amcl_bin2hex(char *src, char *dst, int src_len);
+void amcl_bin2hex(char *dst, char *src, int src_len);
 
 /**
  * @brief Print encoded binary string in hex

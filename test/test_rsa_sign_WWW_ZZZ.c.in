@@ -126,7 +126,7 @@ int main(int argc, char** argv)
 
             // p binary value
             l1 = strlen(linePtr)-1;
-            amcl_hex2bin(linePtr, P.val, l1);
+            amcl_hex2bin(P.val, linePtr, l1);
         }
 
         if (!strncmp(line, QStr, strlen(QStr)))
@@ -139,7 +139,7 @@ int main(int argc, char** argv)
 
             // q binary value
             l1 = strlen(linePtr)-1;
-            amcl_hex2bin(linePtr, Q.val, l1);
+            amcl_hex2bin(Q.val, linePtr, l1);
         }
 
         // Self-Signed CA cert

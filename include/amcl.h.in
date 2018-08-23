@@ -358,13 +358,13 @@ extern void OCT_fromHex(octet *dst,char *src);
 	@param dst hex value
 	@param src Octet to be converted
  */
-extern void OCT_toHex(octet *src,char *dst);
+extern void OCT_toHex(char* dst, octet *src);
 /**	@brief Convert an Octet to string
  *
 	@param dst string value
 	@param src Octet to be converted
  */
-extern void OCT_toStr(octet *src,char *dst);
+extern void OCT_toStr(char* dst, octet *src);
 
 
 

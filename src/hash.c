@@ -116,10 +116,10 @@ static void HASH256_transform(hash256 *sh)
     sh->h[7]+=h;
 }
 
-/* Initialise Hash function */
+/* Initialize Hash function */
 void HASH256_init(hash256 *sh)
 {
-    /* re-initialise */
+    /* re-initialize */
     int i;
     for (i=0; i<64; i++) sh->w[i]=0L;
     sh->length[0]=sh->length[1]=0L;
@@ -265,7 +265,7 @@ static void HASH512_transform(hash512 *sh)
 
 void HASH384_init(hash384 *sh)
 {
-    /* re-initialise */
+    /* re-initialize */
     int i;
     for (i=0; i<80; i++) sh->w[i]=0;
     sh->length[0]=sh->length[1]=0;
@@ -296,7 +296,7 @@ void HASH384_hash(hash384 *sh,char *hash)
 
 void HASH512_init(hash512 *sh)
 {
-    /* re-initialise */
+    /* re-initialize */
     int i;
 
     for (i=0; i<80; i++) sh->w[i]=0;

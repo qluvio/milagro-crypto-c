@@ -102,7 +102,7 @@ int main()
         {
             OCT_rand(&W,&rng,len);
             OCT_copy(&V,&W);
-            OCT_toHex(&W,bytesHex);
+            OCT_toHex(bytesHex,&W);
             OCT_fromHex(&W,bytesHex);
             if(!OCT_comp(&V,&W))
             {
@@ -116,7 +116,7 @@ int main()
         {
             OCT_rand(&W,&rng,len);
             OCT_copy(&V,&W);
-            OCT_toStr(&W,bytes);
+            OCT_toStr(bytes,&W);
             OCT_jstring(&W,bytes);
             if(!OCT_comp(&V,&W))
             {

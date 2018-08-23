@@ -118,7 +118,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // QCAVSx binary value
-            amcl_hex2bin(linePtr, QCAVSx, l1);
+            amcl_hex2bin(QCAVSx, linePtr, l1);
         }
 
 #if CURVETYPE_ZZZ!=MONTGOMERY
@@ -134,7 +134,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // QCAVSy binary value
-            amcl_hex2bin(linePtr, QCAVSy, l1);
+            amcl_hex2bin(QCAVSy, linePtr, l1);
         }
 #endif
 
@@ -154,7 +154,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // dIUT binary value
-            amcl_hex2bin(linePtr, dIUT, l1);
+            amcl_hex2bin(dIUT, linePtr, l1);
 
             dIUTOct.len=l2;
             dIUTOct.max=l2;
@@ -173,7 +173,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // QIUTx binary value
-            amcl_hex2bin(linePtr, QIUTx, l1);
+            amcl_hex2bin(QIUTx, linePtr, l1);
         }
 
 #if CURVETYPE_ZZZ!=MONTGOMERY
@@ -189,7 +189,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // QIUTy binary value
-            amcl_hex2bin(linePtr, QIUTy, l1);
+            amcl_hex2bin(QIUTy, linePtr, l1);
         }
 #endif
 
@@ -209,7 +209,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // ZIUT binary value
-            amcl_hex2bin(linePtr, ZIUT, l1);
+            amcl_hex2bin(ZIUT, linePtr, l1);
 
             ZIUTOct.len=l2;
             ZIUTOct.max=l2;

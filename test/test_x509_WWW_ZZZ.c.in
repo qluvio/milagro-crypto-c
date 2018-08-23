@@ -532,7 +532,7 @@ int main(int argc, char** argv)
 
             // p binary value
             l1 = strlen(linePtr)-1;
-            amcl_hex2bin(linePtr, CERT_PKOct.val, l1);
+            amcl_hex2bin(CERT_PKOct.val, linePtr, l1);
             CERT_PKOct.len = l1/2;
 
 #ifdef DEBUG

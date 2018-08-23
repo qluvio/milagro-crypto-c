@@ -98,7 +98,7 @@ int mpin(csprng *RNG)
     OCT_output(&HCID);
     printf("\n");
 
-    OCT_toHex(&CLIENT_ID,idhex);
+    OCT_toHex(idhex,&CLIENT_ID);
     printf("Client ID= %s\n",idhex);// OCT_toHex(&CLIENT_ID); printf("\n");
 
     /* Client and Server are issued secrets by DTA */

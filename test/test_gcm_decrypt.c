@@ -113,7 +113,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // Key binary value
-            amcl_hex2bin(linePtr, Key, l1);
+            amcl_hex2bin(Key, linePtr, l1);
         }
 
         if (!strncmp(line, IVStr, strlen(IVStr)))
@@ -132,7 +132,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // IV binary value
-            amcl_hex2bin(linePtr, IV, l1);
+            amcl_hex2bin(IV, linePtr, l1);
         }
 
         if (!strncmp(line, CTStr, strlen(CTStr)))
@@ -155,7 +155,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // CT binary value
-            amcl_hex2bin(linePtr, CT, l1);
+            amcl_hex2bin(CT, linePtr, l1);
         }
 
         if (!strncmp(line, AADStr, strlen(AADStr)))
@@ -174,7 +174,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // AAD binary value
-            amcl_hex2bin(linePtr, AAD, l1);
+            amcl_hex2bin(AAD, linePtr, l1);
         }
 
         if (!strncmp(line, TagStr, strlen(TagStr)))
@@ -193,7 +193,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // Golden Tag value
-            amcl_hex2bin(linePtr, Tag1, l1);
+            amcl_hex2bin(Tag1, linePtr, l1);
 
             Tag1Oct.len=TagLen;
             Tag1Oct.max=TagLen;
@@ -218,7 +218,7 @@ int main(int argc, char** argv)
                     exit(EXIT_FAILURE);
 
                 // Golden PT value
-                amcl_hex2bin(linePtr, PT1, l1);
+                amcl_hex2bin(PT1, linePtr, l1);
 
                 PT1Oct.len=CTLen;
                 PT1Oct.max=CTLen;

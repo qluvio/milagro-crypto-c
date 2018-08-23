@@ -93,7 +93,7 @@ int main(int argc, char** argv)
                 exit(EXIT_FAILURE);
 
             // d binary value
-            amcl_hex2bin(linePtr, d, l1);
+            amcl_hex2bin(d, linePtr, l1);
 
             dOct.len=l2;
             dOct.max=l2;
@@ -112,7 +112,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // Qx binary value
-            amcl_hex2bin(linePtr, Qx, l1);
+            amcl_hex2bin(Qx, linePtr, l1);
         }
 
         if (!strncmp(line, QyStr, strlen(QyStr)))
@@ -127,7 +127,7 @@ int main(int argc, char** argv)
             l1 = strlen(linePtr)-1;
 
             // Qy binary value
-            amcl_hex2bin(linePtr, Qy, l1);
+            amcl_hex2bin(Qy, linePtr, l1);
 
             // Assign Public Key
             BIG_XXX qx, qy;

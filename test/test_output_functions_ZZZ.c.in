@@ -93,7 +93,7 @@ void read_BIG_XXX(BIG_XXX A, char* string)
     char support[LINE_LEN];
     BIG_XXX_zero(A);
     len = strlen(string)+1;
-    amcl_hex2bin(string,support,len);
+    amcl_hex2bin(support,string,len);
     len = (len-1)/2;
     BIG_XXX_fromBytesLen(A,support,len);
     BIG_XXX_norm(A);
@@ -613,7 +613,7 @@ int main(int argc, char** argv)
         {
             len = strlen(HEXline);
             linePtr = line + len;
-            amcl_hex2bin(linePtr, bin, 64);
+            amcl_hex2bin(bin,linePtr, 64);
             printf("%s", HEXline);
             amcl_print_hex(bin,32);
             done = 1;
@@ -674,15 +674,18 @@ int main(int argc, char** argv)
     ch1 = getc(testVectFile);
     ch2 = getc(writtenFile);
 
+    int gfd = 0;
     while ((ch1 != EOF) && (ch2 != EOF) && (ch1 == ch2))
     {
         ch1 = getc(testVectFile);
         ch2 = getc(writtenFile);
+        gfd++;
     }
 
     if (ch1 != ch2)
     {
         printf("ERROR output does not match the expected one \n");
+        printf("Char: %d, chars: %c, %c\n",gfd,ch1,ch2);
         exit(EXIT_FAILURE);
     }
     fclose(writtenFile);
